@@ -1,0 +1,39 @@
+.irs--modern .irs-max,
+.irs--modern .irs-min,
+.irs--modern .irs-single,
+.irs--modern .irs-grid-text,
+.irs-grid-pol.small {
+  display: none;
+}
+
+.irs--modern .irs-bar {
+  background: linear-gradient(90deg, #cbb1f1 0%, #435993 100%) !important;
+}
+
+.irs-grid-pol {
+  top: -5px !important;
+  height: 5px !important;
+  background-color: #fff !important;
+  z-index: 999;
+}
+
+.irs--modern .irs-handle,
+.irs--modern .irs-handle.state_hover {
+  width: 26px !important;
+  height: 28px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: url("../img/icon-marker.svg");
+  background-repeat: no-repeat;
+
+  i {
+    display: none !important;
+  }
+}
+
+.irs--modern .irs-handle.state_hover,
+.irs--modern .irs-handle:hover {
+  border: none;
+  background: none;
+  background-image: url("../img/icon-marker.svg") !important;
+}

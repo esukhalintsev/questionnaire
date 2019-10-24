@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+</head>
+
+<body>
+
+  <header class="page-header page-header--closed">
+    <nav class="page-header__nav">
+      <button class="page-header__toggle">Toggle
+        <svg class="page-header__icon page-header__icon--cross" width="50" height="24">
+          <use xlink:href="./img/sprite.svg#icon-cross"></use>
+        </svg>
+        <svg class="page-header__icon page-header__icon--menu" width="25" height="15">
+          <use xlink:href="./img/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <ul class="page-header__list">
+        <li class="page-header__item">
+          <a href="#info">Личная информация</a>
+        </li>
+        <li class="page-header__item">
+          <a href="#exp">Опыт</a>
+        </li>
+        <li class="page-header__item">
+          <a href="#js">JavaScript</a>
+        </li>
+        <li class="page-header__item">
+          <a href="#about">О себе</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="title">Анкета</h1>
+    <section class="form">
+      <div class="container">
+        <form class="form__area" action="" method="post">
+
+          <fieldset class="form__group">
+            <svg class="form__icon" width="50" height="50">
+              <use xlink:href="./img/sprite.svg#icon-bio"></use>
+            </svg>
+            <h2 class="form__subtitle" id="info">Личная информация</h2>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__input" type="text" name="name" placeholder="ФИО">
+              </li>
+              <li class="form__item">
+                <select class="form__select" name="year" id="year">
+                  <option class="form__option" value="default">Год рождения</option>
+                  <option class="form__option" value="1998">1998</option>
+                  <option class="form__option" value="1997">1997</option>
+                  <option class="form__option" value="1996">1996</option>
+                  <option class="form__option" value="1995">1995</option>
+                  <option class="form__option" value="1994">1994</option>
+                  <option class="form__option" fpvalue="1993">1993</option>
+                  <option class="form__option" value="1992">1992</option>
+                </select>
+              </li>
+              <li class="form__item">
+                <input class="form__input" type="text" name="city" placeholder="Место проживания">
+              </li>
+              <li class="form__item">
+                <input class="form__input" type="text" name="skype" placeholder="Skype">
+              </li>
+              <li class="form__item">
+                <input class="form__input" type="email" name="email" placeholder="E-mail">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__group form__group--exp">
+            <svg class="form__icon" width="50" height="50">
+              <use xlink:href="./img/sprite.svg#icon-exp"></use>
+            </svg>
+            <h2 class="form__subtitle" id="exp">Расскажите о своем опыте</h2>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="bem" name="expierence[]" value="BEM">
+                <label class="form__label" for="bem">БЭМ/OOCSS</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="semantique" name="expierence[]" value="semantique">
+                <label class="form__label" for="semantique">Верстаю семантично</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="webpack" name="expierence[]" value="webpack">
+                <label class="form__label" for="webpack">Webpack</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="preprocessors" name="expierence[]" value="preprocessors">
+                <label class="form__label" for="preprocessors">Stylus/LESS/SASS</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="js" name="expierence[]" value="js">
+                <label class="form__label" for="js">ES2015/ES2016</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="jquery" name="expierence[]" value="jquery">
+                <label class="form__label" for="jquery">jQuery</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="svg" name="expierence[]" value="svg">
+                <label class="form__label" for="svg">Работаю с SVG</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="task" name="expierence[]" value="task">
+                <label class="form__label" for="task">Gulp/GRUNT</label>
+              </li>
+              <li class="form__item">
+                <input class="form__checkbox visually-hidden" type="checkbox" id="git" name="expierence[]" value="jquery">
+                <label class="form__label" for="git">Использую Git</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <svg class="form__icon" width="50" height="50">
+              <use xlink:href="./img/sprite.svg#icon-js"></use>
+            </svg>
+            <h2 class="form__subtitle" id="js">Уровень владения JavaScript</h2>
+            <div class="form__wrapper">
+              <p class="form__value">Не владею</p>
+              <p class="form__value">Использую готовые решения</p>
+              <p class="form__value">Использую готовые решения и умею переделывать</p>
+              <p class="form__value form__value--4">Пишу сложный JS с нуля</p>
+            </div>
+            <input type="text" class="js-range-slider">
+          </fieldset>
+
+          <fieldset class="form__group form__group--about">
+            <svg class="form__icon" width="50" height="50">
+              <use xlink:href="./img/sprite.svg#icon-about"></use>
+            </svg>
+            <h2 class="form__subtitle" id="about">Расскажите о себе</h2>
+            <p class="form__desc">Напишите несколько предложений, чем привлекла наша вакансия &nbsp; и что вы ожидаете от работы у нас.</p>
+            <textarea class="form__input form__input--textarea" name="text" id="text" placeholder="Понравилась тем, что..."></textarea>
+          </fieldset>
+          <button class="form__submit" type="submit">Готово</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/menu.js"></script>
+  <script>
+    $(".js-range-slider").ionRangeSlider({
+      grid: true,
+      skin: "modern",
+      step: 22.5
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:250,300,400,700&display=swap&subset=cyrillic,cyrillic-ext');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active):not(:hover),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  width: 93%;
+}
+
+.title {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 250;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    font-size: 55px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 128px;
+    margin-bottom: 46px;
+    font-size: 70px;
+  }
+}

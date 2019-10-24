@@ -1,0 +1,126 @@
+.page-header {
+
+  &--closed {
+    .page-header__nav {
+      left: -170px;
+
+      @media (min-width: $tablet-width) {
+        left: 0;
+      }
+    }
+
+    .page-header__icon--cross {
+      display: none;
+    }
+  }
+
+  &--opened {
+    .page-header__nav {
+      left: 0;
+      z-index: 1100;
+    }
+
+    .page-header__toggle {
+      box-shadow:
+        0 0 1px rgba(0, 0, 0, .1),
+        0 0 15px rgba(0, 0, 0, .08);
+    }
+
+    .page-header__icon {
+      &--cross {
+        display: block;
+      }
+
+      &--menu {
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: absolute;
+    min-width: 170px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1),
+      0 0 15px rgba(0, 0, 0, .08);
+    transition: left .6s;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      box-shadow: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 24px;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 55px;
+    left: 170px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: none;
+    font-size: 0;
+    outline: none;
+    box-shadow:
+      0 0 10px rgba(0, 0, 0, .1),
+      0 0 15px rgba(0, 0, 0, .08);
+
+    &:hover,
+    &:focus {
+      & .page-header__icon {
+        fill: $color-grey;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    fill: $color-ltgrey;
+    margin-left: 2px;
+  }
+
+  &__list {
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 45%;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: inline-block;
+      padding: 10px;
+      width: 100%;
+      color: $color-blue;
+      font-size: 14px;
+      text-align: center;
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus {
+        color: $color-black;
+      }
+    }
+  }
+}
